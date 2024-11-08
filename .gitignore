@@ -1038,3 +1038,4 @@ dkms.conf
 *.dis
 /cmake-build-debug/**
 /conan-io/**
+/cmake-build-debug/_deps/cxxopts-src/
