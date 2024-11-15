@@ -1,9 +1,0 @@
-[requires]
-cxxopts/3.2.0
-flatbuffers/23.5.26
-cmake/3.31.0
-[generators]
-CMakeDeps
-CMakeToolchain
-[layout]
-cmake_layout

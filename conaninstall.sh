@@ -1,1 +1,1 @@
-conan install . --output-folder=cmake-build-debug --build=missing --settings=build_type=Debug
+conan build . --settings=build_type=Debug --options old=False --build="missing"
