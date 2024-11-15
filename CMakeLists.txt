@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.28.3)
-project(FlatbuffersCompatibility VERSION 0.0.0 DESCRIPTION "app" LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+project(FB_CMP_PR VERSION 0.0.0 LANGUAGES CXX)
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
-set(CMAKE_CXX_STANDARD 20)
-option(OLD OFF)
+message(CmakePathToPrefix: " ${CMAKE_PREFIX_PATH}")
+message(Build directory: " ${CMAKE_BINARY_DIR}")
+message(Current cmake directory: " ${CMAKE_CURRENT_SOURCE_DIR}")
+message(current build directory: " ${CMAKE_CURRENT_BINARY_DIR}")
 
-add_executable(Executable main.cpp
-        main.cpp)
+add_subdirectory(src)
