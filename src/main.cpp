@@ -3,7 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include "flatbuffers/flatbuffers.h"
-#include "cxxopts.hpp"
+#include <cxxopts.hpp>
 #include "monster_generated.h"
 int main(int argc, char** argv)
 {
