@@ -1,1 +1,1 @@
-conan build . --settings=build_type=Debug --options old=False --build="missing"
+conan install . --settings=build_type=Debug --options old=True --build="missing"
