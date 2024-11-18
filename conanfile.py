@@ -41,18 +41,16 @@ class Project(ConanFile):
         self.tool_requires("cmake/3.30.0")
 
     def configure(self):
-        self.options["flatbuffers/*"].flatbuffers_build_tests = False
-        self.options["flatbuffers/*"].flatbuffers_build_flatc = True
-        self.options["flatbuffers/*"].flatbuffers_static_flatc = False
-        self.options["flatbuffers/*"].flatbuffers_build_flathash = False
+        pass
 
     def generate(self):
         cmake_tc = CMakeToolchain(self, generator="Ninja")
-        ##TODO Is not working properly, we need pass this arguments at flatbuffer configure step
+        ##TODO Is not working properly, we need pass this arguments to flatbuffer configure step
         # cmake_tc.variables["FLATBUFFERS_BUILD_TESTS"] = "False"
         # cmake_tc.variables["FLATBUFFERS_BUILD_FLATC"] = "True"
         # cmake_tc.variables["FLATBUFFERS_STATIC_FLATC"] = "False"
         # cmake_tc.variables["FLATBUFFERS_BUILD_FLATHASH"] = "False"
+        cmake_tc.cache_variables["OLD"] = "True" if self.options.old else "False"
         cmake_tc.generate()
         deps = CMakeDeps(self)
         deps.generate()
