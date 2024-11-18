@@ -8,6 +8,7 @@
 int main(int argc, char** argv)
 {
     flatbuffers::FlatBufferBuilder builder(1024);
+    cxxopts::Options options("MyProgram", "One line description of MyProgram");
     options.add_options()
         ("b,bar", "Param bar", cxxopts::value<std::string>())
         ("d,debug", "Enable debugging", cxxopts::value<bool>()->default_value("false"))
